@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class reverselinkedlistday2{
     static class Node{
         int data;
@@ -66,10 +67,17 @@ class reverselinkedlistday2{
     }
 
     public static void main(String[] args) {
-        for (int i = 1; i <= 6; i++) add(i);
-
-        int k = 2;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the element in the linkedlist");
+        while(true){
+            int data=sc.nextInt();
+            if(data==-1)break;
+            add(data);
+        }
+        System.out.println("enter k value");
+        int k=sc.nextInt();
         Node newHead = reverseKGroup(head, k);
         printList(newHead);
+        sc.close();
     }
 }
