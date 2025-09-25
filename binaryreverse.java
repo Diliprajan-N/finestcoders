@@ -9,12 +9,12 @@ public class binaryreverse {
         
 }
        sb.reverse();
-        System.out.println(sb);
+        
         for(int i=0;i<sb.length();i++){
             int bit=sb.charAt(sb.length()-1-i)-'0';
             decimal+=bit*Math.pow(2,i);
         }
-        System.out.println(sb);
+     
         System.out.println(decimal);
     }
 }
